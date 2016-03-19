@@ -1,0 +1,17 @@
+{
+  "accountId": "2125866694095514939",
+  "mAccountId": "13237e4be152af4c4289557532313b65deedcf6a5553276fc68c860a590e7c1e",
+  "region": "gb",
+  "language": "en",
+  "onlineId": "xX_niteshade_Xx",
+  "age": 26,
+  "dateOfBirth": "1990\/2\/10",
+  "communityDomain": "a1",
+  "subaccount": false,
+  "ps4Available": true,
+  "parentalControl": {
+    "RestrictChat": false,
+    "RestrictUGM": false,
+    "RestrictStoreContent": true
+  }
+}

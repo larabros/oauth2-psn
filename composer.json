@@ -1,0 +1,47 @@
+{
+    "name": "larabros/oauth2-psn",
+    "type": "project",
+    "description": "PSN OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+    "keywords": [
+        "larabros",
+        "oauth2-psn"
+    ],
+    "homepage": "https://github.com/larabros/oauth2-psn",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hassan Khan",
+            "email": "contact@hassankhan.me",
+            "homepage": "http://hassankhan.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^5.5.9 || ^7.0",
+        "league/oauth2-client": "^1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8 || ^5.0",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3",
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Larabros\\OAuth2\\Client\\Provider\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Larabros\\OAuth2\\Client\\Provider\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
