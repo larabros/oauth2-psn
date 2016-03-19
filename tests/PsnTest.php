@@ -22,6 +22,11 @@ class PsnTest extends TestCase
         ]);
     }
 
+    /**
+     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAuthorizationUrl()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getDefaultScopes()
+     */
     public function testAuthorizationUrl()
     {
         $url = $this->provider->getAuthorizationUrl();
@@ -37,7 +42,10 @@ class PsnTest extends TestCase
         $this->assertNotNull($this->provider->getState());
     }
 
-
+    /**
+     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAuthorizationUrl()
+     */
     public function testScopes()
     {
         $options = ['scope' => [uniqid(),uniqid()]];
@@ -47,6 +55,11 @@ class PsnTest extends TestCase
         $this->assertContains(urlencode(implode(',', $options['scope'])), $url);
     }
 
+    /**
+     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAuthorizationUrl()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getDefaultScopes()
+     */
     public function testGetAuthorizationUrl()
     {
         $url = $this->provider->getAuthorizationUrl();
@@ -55,6 +68,10 @@ class PsnTest extends TestCase
         $this->assertEquals('/2.0/oauth/authorize', $uri['path']);
     }
 
+    /**
+     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
+     */
     public function testGetBaseAccessTokenUrl()
     {
         $params = [];
@@ -65,6 +82,11 @@ class PsnTest extends TestCase
         $this->assertEquals('/2.0/oauth/token', $uri['path']);
     }
 
+    /**
+     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::checkResponse()
+     */
     public function testGetAccessToken()
     {
         $response = m::mock('Psr\Http\Message\ResponseInterface');
@@ -82,9 +104,22 @@ class PsnTest extends TestCase
         $this->assertNotNull($token->getRefreshToken());
     }
 
+    /**
+     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getResourceOwnerDetailsUrl()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::createResourceOwner()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getAuthorizationHeaders()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::checkResponse()
+     * @covers Larabros\OAuth2\Client\Provider\PsnResourceOwner::__construct()
+     * @covers Larabros\OAuth2\Client\Provider\PsnResourceOwner::getId()
+     * @covers Larabros\OAuth2\Client\Provider\PsnResourceOwner::getPsnId()
+     * @covers Larabros\OAuth2\Client\Provider\PsnResourceOwner::toArray()
+     */
     public function testUserData()
     {
         $userId = '2125866694095514939';
+        $psnId  = 'xX_niteshade_Xx';
 
         $postResponse = m::mock('Psr\Http\Message\ResponseInterface');
         $postResponse->shouldReceive('getBody')->andReturn($this->getFixture('token.json', false));
@@ -104,17 +139,16 @@ class PsnTest extends TestCase
         $user = $this->provider->getResourceOwner($token);
 
         $this->assertEquals($userId, $user->getId());
+        $this->assertEquals($psnId, $user->getPsnId());
         $this->assertEquals($userId, $user->toArray()['accountId']);
-//        $this->assertEquals($name, $user->getName());
-//        $this->assertEquals($name, $user->toArray()['full_name']);
-//        $this->assertEquals($nickname, $user->getNickname());
-//        $this->assertEquals($nickname, $user->toArray()['username']);
-//        $this->assertEquals($picture, $user->getImageurl());
-//        $this->assertEquals($picture, $user->toArray()['profile_picture']);
-//        $this->assertEquals($description, $user->getDescription());
-//        $this->assertEquals($description, $user->toArray()['bio']);
+        $this->assertEquals($psnId, $user->toArray()['onlineId']);
     }
 
+    /**
+     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::checkResponse()
+     */
     public function testExceptionThrownWhenErrorObjectReceived()
     {
         $message = uniqid();
@@ -134,6 +168,11 @@ class PsnTest extends TestCase
         $token = $this->provider->getAccessToken('authorization_code', ['code' => 'mock_authorization_code']);
     }
 
+    /**
+     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::checkResponse()
+     */
     public function testAnotherExceptionThrownWhenErrorObjectReceived()
     {
         $message = uniqid();
@@ -153,6 +192,13 @@ class PsnTest extends TestCase
         $token = $this->provider->getAccessToken('authorization_code', ['code' => 'mock_authorization_code']);
     }
 
+    /**
+     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getResourceOwnerDetailsUrl()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::getAuthorizationHeaders()
+     * @covers Larabros\OAuth2\Client\Provider\Psn::checkResponse()
+     */
     public function testGetAuthenticatedRequest()
     {
         $method = 'GET';
