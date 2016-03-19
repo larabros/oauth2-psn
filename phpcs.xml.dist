@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="larabros">
-    <description>PHPCS configuration for larabros oauth2-psn</description>
+    <description>PHPCS configuration for Larabros oauth2-psn</description>
 
     <file>src</file>
 

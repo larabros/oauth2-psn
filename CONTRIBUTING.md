@@ -6,9 +6,9 @@ We accept contributions via Pull Requests on [Github](https://github.com/larabro
 
 ## Documentation
 
-Documentation for this project is available at http://oauth2-psn.readthedocs.org.
+<!-- Documentation for this project is available at http://oauth2-psn.readthedocs.org. -->
 
-The API reference documentation is available at http://oauth2-psn.readthedocs.org/en/latest/Larabros/oauth2-psn.
+<!-- The API reference documentation is available at http://oauth2-psn.readthedocs.org/en/latest/Larabros/oauth2-psn. -->
 
 ## Pull Requests
 

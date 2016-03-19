@@ -10,7 +10,7 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="larabros oauth2-psn Test Suite">
+        <testsuite name="Larabros oauth2-psn Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
