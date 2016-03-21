@@ -135,7 +135,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-contributors]: ../../contributors
 
 [ico-phpeye]: http://php-eye.com/badge/larabros/oauth2-psn/tested.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/:styleci_repo/shield
+[ico-styleci]: https://styleci.io/repos/54242297/shield
 
 [link-phpeye]: http://php-eye.com/package/larabros/oauth2-psn
-[link-styleci]: https://styleci.io/repos/51898151/
+[link-styleci]: https://styleci.io/repos/54242297/
