@@ -52,7 +52,6 @@ class Psn extends AbstractProvider
     protected function checkResponse(ResponseInterface $response, $data)
     {
         if (isset($data['error'])) {
-
             if (is_array($data['error'])) {
                 throw new IdentityProviderException(
                     $data['error']['messageKey'].': '.$data['error']['message'] ?: $response->getReasonPhrase(),
