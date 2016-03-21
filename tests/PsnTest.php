@@ -130,7 +130,7 @@ class PsnTest extends TestCase
         $this->provider->setHttpClient($client);
 
         $token = $this->provider->getAccessToken('authorization_code', ['code' => 'mock_authorization_code']);
-        $user = $this->provider->getResourceOwner($token);
+        $user  = $this->provider->getResourceOwner($token);
 
         $this->assertEquals($userId, $user->getId());
         $this->assertEquals($psnId, $user->getPsnId());
@@ -144,8 +144,7 @@ class PsnTest extends TestCase
      */
     public function testExceptionThrownWhenErrorObjectReceived()
     {
-        $message = uniqid();
-        $status = rand(400,600);
+        $status       = rand(400,600);
         $postResponse = m::mock('Psr\Http\Message\ResponseInterface');
         $postResponse->shouldReceive('getBody')->andReturn('{"error":{"code":3174913,"message":"Unauthorized","messageKey":"UNAUTHORIZED"}}');
 
@@ -167,8 +166,7 @@ class PsnTest extends TestCase
      */
     public function testAnotherExceptionThrownWhenErrorObjectReceived()
     {
-        $message = uniqid();
-        $status = rand(400,600);
+        $status  = rand(400,600);
         $postResponse = m::mock('Psr\Http\Message\ResponseInterface');
         $postResponse->shouldReceive('getBody')->andReturn('{"error":"redirect_uri_mismatch","error_description":"Invalid redirect: null does not match one of the registered values.","error_code":4174}');
 
@@ -193,7 +191,7 @@ class PsnTest extends TestCase
     public function testGetAuthenticatedRequest()
     {
         $method = 'GET';
-        $url = 'https://vl.api.np.km.playstation.net/vl/api/v1/mobile/users/me/info';
+        $url    = 'https://vl.api.np.km.playstation.net/vl/api/v1/mobile/users/me/info';
 
         $accessTokenResponse = m::mock('Psr\Http\Message\ResponseInterface');
         $accessTokenResponse->shouldReceive('getBody')->andReturn($this->getFixture('token.json', false));
