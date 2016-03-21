@@ -20,3 +20,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Security
 - Nothing
+
+## 0.2.0 - 2016-03-21
+
+### Added
+- Initial release.
