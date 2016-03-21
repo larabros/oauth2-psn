@@ -4,6 +4,14 @@ namespace Larabros\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
+/**
+ * Represents the owner of the access token.
+ *
+ * @package    OAuth2
+ * @author     Hassan Khan <contact@hassankhan.me>
+ * @link       https://github.com/larabros/oauth2-psn
+ * @license    MIT
+ */
 class PsnResourceOwner implements ResourceOwnerInterface
 {
     /**
