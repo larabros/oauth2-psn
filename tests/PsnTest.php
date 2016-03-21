@@ -144,7 +144,7 @@ class PsnTest extends TestCase
      */
     public function testExceptionThrownWhenErrorObjectReceived()
     {
-        $status       = rand(400,600);
+        $status       = rand(400, 600);
         $postResponse = m::mock('Psr\Http\Message\ResponseInterface');
         $postResponse->shouldReceive('getBody')->andReturn('{"error":{"code":3174913,"message":"Unauthorized","messageKey":"UNAUTHORIZED"}}');
 
@@ -166,7 +166,7 @@ class PsnTest extends TestCase
      */
     public function testAnotherExceptionThrownWhenErrorObjectReceived()
     {
-        $status  = rand(400,600);
+        $status       = rand(400, 600);
         $postResponse = m::mock('Psr\Http\Message\ResponseInterface');
         $postResponse->shouldReceive('getBody')->andReturn('{"error":"redirect_uri_mismatch","error_description":"Invalid redirect: null does not match one of the registered values.","error_code":4174}');
 
