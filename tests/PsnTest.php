@@ -23,7 +23,6 @@ class PsnTest extends TestCase
     }
 
     /**
-     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAuthorizationUrl()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getDefaultScopes()
      */
@@ -43,7 +42,6 @@ class PsnTest extends TestCase
     }
 
     /**
-     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAuthorizationUrl()
      */
     public function testScopes()
@@ -56,7 +54,6 @@ class PsnTest extends TestCase
     }
 
     /**
-     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAuthorizationUrl()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getDefaultScopes()
      */
@@ -69,7 +66,6 @@ class PsnTest extends TestCase
     }
 
     /**
-     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
      */
     public function testGetBaseAccessTokenUrl()
@@ -83,7 +79,6 @@ class PsnTest extends TestCase
     }
 
     /**
-     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
      * @covers Larabros\OAuth2\Client\Provider\Psn::checkResponse()
      */
@@ -105,7 +100,6 @@ class PsnTest extends TestCase
     }
 
     /**
-     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getResourceOwnerDetailsUrl()
      * @covers Larabros\OAuth2\Client\Provider\Psn::createResourceOwner()
@@ -145,7 +139,6 @@ class PsnTest extends TestCase
     }
 
     /**
-     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
      * @covers Larabros\OAuth2\Client\Provider\Psn::checkResponse()
      */
@@ -169,7 +162,6 @@ class PsnTest extends TestCase
     }
 
     /**
-     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
      * @covers Larabros\OAuth2\Client\Provider\Psn::checkResponse()
      */
@@ -193,7 +185,6 @@ class PsnTest extends TestCase
     }
 
     /**
-     * @covers Larabros\OAuth2\Client\Provider\Psn::__construct()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getBaseAccessTokenUrl()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getResourceOwnerDetailsUrl()
      * @covers Larabros\OAuth2\Client\Provider\Psn::getAuthorizationHeaders()

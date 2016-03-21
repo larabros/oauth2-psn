@@ -17,14 +17,6 @@ class Psn extends AbstractProvider
     /**
      * {@inheritDoc}
      */
-    public function __construct(array $options = [], array $collaborators = [])
-    {
-        parent::__construct($options, $collaborators);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getBaseAuthorizationUrl()
     {
         return 'https://auth.api.sonyentertainmentnetwork.com/2.0/oauth/authorize';
