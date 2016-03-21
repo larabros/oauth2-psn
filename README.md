@@ -9,8 +9,6 @@
 
 [![Build Status][ico-phpeye]][link-phpeye]
 [![PSR2 Conformance][ico-styleci]][link-styleci]
-[![Documentation][ico-docs]][link-docs]
-[![Gitter][ico-gitter]][link-gitter]
 
 PSN OAuth 2.0 Client Provider for the PHP League's [OAuth2-Client](https://github.com/thephpleague/oauth2-client), for PHP 5.5.9+.
 
@@ -138,11 +136,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [ico-phpeye]: http://php-eye.com/badge/larabros/oauth2-psn/tested.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/:styleci_repo/shield
-[ico-docs]: https://img.shields.io/badge/docs-stable-brightgreen.svg?style=flat-square
-[ico-gitter]: https://img.shields.io/gitter/room/larabros/oauth2-psn.svg?style=flat-square
 
 [link-phpeye]: http://php-eye.com/package/larabros/oauth2-psn
 [link-styleci]: https://styleci.io/repos/51898151/
-[link-docs]: http://oauth2-psn.readthedocs.org/en/stable
-[link-apidocs]: http://oauth2-psn.readthedocs.org/en/stable/Larabros/OAuth2\Client
-[link-gitter]: https://gitter.im/larabros/oauth2-psn
