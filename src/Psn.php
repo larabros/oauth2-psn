@@ -7,6 +7,14 @@ use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Token\AccessToken;
 use Psr\Http\Message\ResponseInterface;
 
+/**
+ * An OAuth2 provider class for PSN.
+ *
+ * @package    OAuth2
+ * @author     Hassan Khan <contact@hassankhan.me>
+ * @link       https://github.com/larabros/oauth2-psn
+ * @license    MIT
+ */
 class Psn extends AbstractProvider
 {
     /**
